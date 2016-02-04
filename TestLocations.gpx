@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode">
+    <wpt lat="39.242430" lon="-76.857948">
+         <name>Centennial Park</name>
+    </wpt>
+    <wpt lat="39.230297" lon="-76.885071">
+        <name>Cedar Park</name>
+    </wpt>
+    <wpt lat="39.230297" lon="-76.985071">
+         <name>West</name>
+    </wpt>
+    <wpt lat="39.230297" lon="-76.885071">
+        <name>Cedar Park</name>
+    </wpt>
+</gpx>

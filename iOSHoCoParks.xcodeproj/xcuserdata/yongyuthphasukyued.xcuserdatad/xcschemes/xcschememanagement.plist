@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>iOSHoCoParks WatchKit App.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>iOSHoCoParks.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>CA1511E61AFF7B3F00623539</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA1511F11AFF7B4000623539</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAE5B78C1AEFCA85007B1248</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAE5B7A51AEFCA86007B1248</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

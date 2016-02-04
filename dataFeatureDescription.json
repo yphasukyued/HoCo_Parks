@@ -1,0 +1,36 @@
+[
+{
+ "id":0,
+ "name":"Parks",
+ "description":"     Howard County offers its citizens regional, community, and neighborhood parks containing sports facilities, recreation areas for picnics, and scenic outdoor trails for hiking and exploring. Nearly all Howard County public parks have playground areas, but we also have several stand-alone playgrounds that are not located within a traditional park. We also have an off-leash area at Worthington Park for the enjoyment of four-legged citizens accompanied by their owners."
+ },
+ {
+ "id":1,
+ "name":"Historic Sites",
+ "description":"     The mission of Howard County Recreation and Parks Heritage Initiative is to capture and convey the authentic and rich history of Howard County through educational programs and historic preservation. Howard County Recreation and Parks Heritage staff offers a variety of educational programs, special events, tours of its museums and parks and many opportunities for people of all ages throughout the county.\n\nIf you are looking for a way to bring history alive, the possibilities are endless. Volunteers are always needed to assist in the day-to-day operations of the museums and historic sites. Volunteer opportunities include docent, tour guide, gardener, and much more. For more information about a historic site or how to volunteer please contact Caitlin Chamberlain, Heritage Program Supervisor, at 410-313-0420 or cchamberlain@howardcountymd.gov."
+ },
+ {
+ "id":2,
+ "name":"Pavilions",
+  "description":"     Park pavilions are a great place to hold a birthday party, corporate event, large family gathering, school picnic or any other special occasion. Pavilions vary in size to accommodate any group, and many come equipped with cooking facilities.\n\n     The pavilion rental season runs from April 1 through Nov. 30, rain or shine (there are no refunds for inclement weather).\n\n     Pavilions are available free on a first-come, first-served basis during the remainder of the year. However, restroom water and water fountains are turned off during winter months and grills may not be available or accessible during this time due to winter maintenance. Your rental may begin as early as 10 AM and must conclude by sunset.\n\n     You MUST leave the park by the designated time of sunset or be charged a late fee of $25 per ½ hour.\n\n     For information about the pavilions or to make a reservation, you may call 410-313-4682 Monday - Friday, 8 AM - 4:30 PM. Click on each pavilion below for details, including pictures and amenities."
+ },
+ {
+ "id":3,
+ "name":"Playgrounds",
+ "description":"     Our playgrounds are for all children. Please help us keep them clean and safe by observing the following:\n\nNo smoking, food or beverages on the playground. Use age-appropriate playground equipment only and for its intended purpose only. Bicycles, skateboards, etc. are not permitted. Pets (of any kind) are not permitted on playgrounds."
+ },
+ {
+ "id":4,
+ "name":"TRAILHEAD",
+ "description":"     Utilizing the trails is a great way to enjoy nature in one of the most beautiful areas of Howard County, and get your exercise at the same time! There are also subtrails to enjoy."
+ },
+ {
+ "id":5,
+ "name":"Amenities",
+ "description":"Fields and Courts\n\nSoftball/baseball and multi-purpose fields are available by permit only. Preference is given to sports leagues and community groups. There are reservation, light and tournament fees. Call 410-313-4626 for details. Softball/baseball and multi-purpose field locations are below. Tennis courts are available on a first-come, first-served basis except during scheduled lessons or tournaments.\n\nIndoor Sports Arena\n\nThe Meadowbrook Athletic Complex (the 'MAC') is a destination for indoor basketball, volleyball, field hockey, badminton, jump rope and much more! The facility houses 35,000 square feet of unobstructed gymnasium space designed to serve all ages and all levels of play. Meadowbrook Athletic Complex is available for rentals during operating hours."
+ }, {
+ "id":6,
+ "name":"DOG",
+ "description":"Some word about dog park"
+ }
+ ]

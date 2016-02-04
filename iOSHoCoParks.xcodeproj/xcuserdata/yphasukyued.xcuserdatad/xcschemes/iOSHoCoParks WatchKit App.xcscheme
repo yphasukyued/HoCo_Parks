@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0700"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "36FB385F1B5858E500429551"
+               BuildableName = "iOSHoCoParks WatchKit App.app"
+               BlueprintName = "iOSHoCoParks WatchKit App"
+               ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAE5B78C1AEFCA85007B1248"
+               BuildableName = "iOSHoCoParks.app"
+               BlueprintName = "iOSHoCoParks"
+               ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "36FB384D1B5858E400429551"
+               BuildableName = "iOSHoCoParks WatchKit Extension.appex"
+               BlueprintName = "iOSHoCoParks WatchKit Extension"
+               ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36FB385F1B5858E500429551"
+            BuildableName = "iOSHoCoParks WatchKit App.app"
+            BlueprintName = "iOSHoCoParks WatchKit App"
+            ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/iOSHoCoParks">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36FB385F1B5858E500429551"
+            BuildableName = "iOSHoCoParks WatchKit App.app"
+            BlueprintName = "iOSHoCoParks WatchKit App"
+            ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36FB385F1B5858E500429551"
+            BuildableName = "iOSHoCoParks WatchKit App.app"
+            BlueprintName = "iOSHoCoParks WatchKit App"
+            ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/iOSHoCoParks">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36FB385F1B5858E500429551"
+            BuildableName = "iOSHoCoParks WatchKit App.app"
+            BlueprintName = "iOSHoCoParks WatchKit App"
+            ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "36FB385F1B5858E500429551"
+            BuildableName = "iOSHoCoParks WatchKit App.app"
+            BlueprintName = "iOSHoCoParks WatchKit App"
+            ReferencedContainer = "container:iOSHoCoParks.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

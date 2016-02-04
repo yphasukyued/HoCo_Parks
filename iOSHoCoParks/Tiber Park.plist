@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict><key>longitude</key><real>-76.795552</real><key>latitude</key><real>39.26734</real></dict>
+        <dict><key>longitude</key><real>-76.795661</real><key>latitude</key><real>39.267535</real></dict>
+        <dict><key>longitude</key><real>-76.795669</real><key>latitude</key><real>39.267549</real></dict>
+        <dict><key>longitude</key><real>-76.79574</real><key>latitude</key><real>39.267526</real></dict>
+        <dict><key>longitude</key><real>-76.795815</real><key>latitude</key><real>39.267502</real></dict>
+        <dict><key>longitude</key><real>-76.795711</real><key>latitude</key><real>39.26731</real></dict>
+        <dict><key>longitude</key><real>-76.795704</real><key>latitude</key><real>39.267296</real></dict>
+        <dict><key>longitude</key><real>-76.795675</real><key>latitude</key><real>39.2673</real></dict>
+        <dict><key>longitude</key><real>-76.795627</real><key>latitude</key><real>39.267316</real></dict>
+        <dict><key>longitude</key><real>-76.795552</real><key>latitude</key><real>39.26734</real></dict>
+    </array>
+</plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict><key>longitude</key><real>-76.866999</real><key>latitude</key><real>39.185101</real></dict>
+        <dict><key>longitude</key><real>-76.866643</real><key>latitude</key><real>39.185118</real></dict>
+        <dict><key>longitude</key><real>-76.866492</real><key>latitude</key><real>39.185125</real></dict>
+        <dict><key>longitude</key><real>-76.866491</real><key>latitude</key><real>39.185133</real></dict>
+        <dict><key>longitude</key><real>-76.866384</real><key>latitude</key><real>39.186178</real></dict>
+        <dict><key>longitude</key><real>-76.865655</real><key>latitude</key><real>39.186284</real></dict>
+        <dict><key>longitude</key><real>-76.8655</real><key>latitude</key><real>39.18698</real></dict>
+        <dict><key>longitude</key><real>-76.86778</real><key>latitude</key><real>39.187069</real></dict>
+        <dict><key>longitude</key><real>-76.867784</real><key>latitude</key><real>39.187069</real></dict>
+        <dict><key>longitude</key><real>-76.867859</real><key>latitude</key><real>39.186867</real></dict>
+        <dict><key>longitude</key><real>-76.867894</real><key>latitude</key><real>39.186771</real></dict>
+        <dict><key>longitude</key><real>-76.867957</real><key>latitude</key><real>39.186597</real></dict>
+        <dict><key>longitude</key><real>-76.868026</real><key>latitude</key><real>39.186412</real></dict>
+        <dict><key>longitude</key><real>-76.868106</real><key>latitude</key><real>39.186195</real></dict>
+        <dict><key>longitude</key><real>-76.868231</real><key>latitude</key><real>39.185853</real></dict>
+        <dict><key>longitude</key><real>-76.868313</real><key>latitude</key><real>39.185628</real></dict>
+        <dict><key>longitude</key><real>-76.868533</real><key>latitude</key><real>39.185028</real></dict>
+        <dict><key>longitude</key><real>-76.868498</real><key>latitude</key><real>39.185028</real></dict>
+        <dict><key>longitude</key><real>-76.868148</real><key>latitude</key><real>39.185045</real></dict>
+        <dict><key>longitude</key><real>-76.867833</real><key>latitude</key><real>39.18506</real></dict>
+        <dict><key>longitude</key><real>-76.867419</real><key>latitude</key><real>39.185081</real></dict>
+        <dict><key>longitude</key><real>-76.866999</real><key>latitude</key><real>39.185101</real></dict>
+    </array>
+</plist>

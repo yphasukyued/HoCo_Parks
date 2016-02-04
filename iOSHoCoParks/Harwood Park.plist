@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict><key>longitude</key><real>-76.737268</real><key>latitude</key><real>39.191541</real></dict><dict><key>longitude</key><real>-76.737978</real><key>latitude</key><real>39.191133</real></dict><dict><key>longitude</key><real>-76.737872</real><key>latitude</key><real>39.191023</real></dict><dict><key>longitude</key><real>-76.737557</real><key>latitude</key><real>39.190692</real></dict><dict><key>longitude</key><real>-76.737452</real><key>latitude</key><real>39.190582</real></dict><dict><key>longitude</key><real>-76.737442</real><key>latitude</key><real>39.190588000000005</real></dict><dict><key>longitude</key><real>-76.737112</real><key>latitude</key><real>39.190777</real></dict><dict><key>longitude</key><real>-76.737084</real><key>latitude</key><real>39.190794</real></dict><dict><key>longitude</key><real>-76.736744</real><key>latitude</key><real>39.19099</real></dict><dict><key>longitude</key><real>-76.736796</real><key>latitude</key><real>39.191045</real></dict><dict><key>longitude</key><real>-76.736953</real><key>latitude</key><real>39.19121</real></dict><dict><key>longitude</key><real>-76.737058</real><key>latitude</key><real>39.19132</real></dict><dict><key>longitude</key><real>-76.737163</real><key>latitude</key><real>39.191431</real></dict><dict><key>longitude</key><real>-76.737268</real><key>latitude</key><real>39.191541</real></dict>
+    </array>
+</plist>
