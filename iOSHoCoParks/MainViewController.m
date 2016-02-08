@@ -309,7 +309,7 @@ const int MAXIMUM_ZOOM = 20;
     logo.alpha = 0.8;
     [mainView addSubview:logo];
 
-    self.mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(20, 180, self.view.frame.size.width-40, 320) style:UITableViewStylePlain];
+    self.mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(20, 180, self.view.frame.size.width-40, 280) style:UITableViewStylePlain];
     self.mainTableView.dataSource = self;
     self.mainTableView.delegate = self;
     self.mainTableView.backgroundColor = [UIColor clearColor];
@@ -1036,8 +1036,8 @@ const int MAXIMUM_ZOOM = 20;
         [self openView];
     } else if ([selectedRow isEqualToString:@"Amenities"]) {
         [self openMainAmenities];
-    } else if ([selectedRow isEqualToString:@"Run and Walk"]) {
-        [self openNewRun];
+    //} else if ([selectedRow isEqualToString:@"Run and Walk"]) {
+    //    [self openNewRun];
     }
 }
 -(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {

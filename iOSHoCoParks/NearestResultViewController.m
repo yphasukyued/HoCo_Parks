@@ -161,7 +161,7 @@
     int X_Line, Y_Line, x, y;
     int countdown;
     NSTimer *timer;
-    NSTimer *timer1;
+    //NSTimer *timer1;
     NSInteger viewTag;
     BOOL nextRegionChangeIsFromUserInteraction;
     CGFloat latUserLocation;
@@ -180,7 +180,7 @@
     UIImageView *postImage;
     UIButton *shareBTN;
     UIButton *gpsBTN;
-    UILabel *memoryLabel;
+    //UILabel *memoryLabel;
 }
 @end
 
@@ -653,7 +653,7 @@
     } else if ([searchItem isEqualToString:@"Historic Sites"]) {
         inImage = [UIImage imageNamed:@"Waverly Mansion.jpg"];
     } else {
-        inImage = [UIImage imageNamed:@"David Force Community Park.jpg"];
+        inImage = [UIImage imageNamed:@"David Force Natural Resource Area & Community Park.jpg"];
     }
     
     CIFilter *gaussianBlurFilter = [CIFilter filterWithName:@"CIGaussianBlur"];
@@ -673,6 +673,7 @@
     self.titleImage.alpha = 1;
     [mainView addSubview:self.titleImage];
 
+    /*
     memoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 135, mainView.frame.size.width-20, 20)];
     memoryLabel.text = @"";
     memoryLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:14];
@@ -681,6 +682,7 @@
     memoryLabel.textAlignment = NSTextAlignmentCenter;
     memoryLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [mainView addSubview:memoryLabel];
+    */
     
     UIImageView *tableImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 170, self.view.frame.size.width, self.view.frame.size.height-170)];
     tableImage.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -1001,14 +1003,14 @@
     [indicator startAnimating];
     timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(initPageTurn) userInfo:nil repeats:NO];
     
-    timer1 = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(checkMemory) userInfo:nil repeats:YES];
+    //timer1 = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(checkMemory) userInfo:nil repeats:YES];
     
     [self openCategory];
 }
 #pragma mark
-- (void)checkMemory {
-    memoryLabel.text = [NSString stringWithFormat:@"Free Memory: %.0f MB", [[UIDevice currentDevice] availableMemory]];
-}
+//- (void)checkMemory {
+//    memoryLabel.text = [NSString stringWithFormat:@"Free Memory: %.0f MB", [[UIDevice currentDevice] availableMemory]];
+//}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.parks removeAllObjects];

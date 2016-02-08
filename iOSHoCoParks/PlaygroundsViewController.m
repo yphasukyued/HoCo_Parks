@@ -171,7 +171,7 @@
     int X_Line, Y_Line, x, y;
     int countdown;
     NSTimer *timer;
-    NSTimer *timer1;
+    //NSTimer *timer1;
     CGFloat latUserLocation;
     CGFloat lngUserLocation;
     CGImageRef cgimg;
@@ -189,7 +189,7 @@
     UIImageView *postImage;
     UIButton *shareBTN;
     UIButton *gpsBTN;
-    UILabel *memoryLabel;
+    //UILabel *memoryLabel;
 }
 
 @end
@@ -915,7 +915,7 @@
     titleImage.image = [UIImage imageWithCIImage:inputImage1];
     titleImage.alpha = 1;
     [mainView addSubview:titleImage];
-    
+    /*
     memoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 125, mainView.frame.size.width-20, 20)];
     memoryLabel.text = @"";
     memoryLabel.font = [UIFont fontWithName:@"TrebuchetMS" size:14];
@@ -924,7 +924,7 @@
     memoryLabel.textAlignment = NSTextAlignmentCenter;
     memoryLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [mainView addSubview:memoryLabel];
-    
+    */
     gpsBTN = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, mainView.frame.size.width, 25)];
     [gpsBTN addTarget:self action:@selector(callSetting) forControlEvents:UIControlEventTouchUpInside];
     gpsBTN.backgroundColor = [UIColor colorWithRed:195/255.0f green:195/255.0f blue:195/255.0f alpha:0.5f];
@@ -1299,14 +1299,14 @@
         [self pageTurn:pageControl];
     }
     
-    timer1 = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(checkMemory) userInfo:nil repeats:YES];
+    //timer1 = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(checkMemory) userInfo:nil repeats:YES];
     
     [self openCategory];
 }
 #pragma mark
-- (void)checkMemory {
-    memoryLabel.text = [NSString stringWithFormat:@"Free Memory: %.0f MB", [[UIDevice currentDevice] availableMemory]];
-}
+//- (void)checkMemory {
+//    memoryLabel.text = [NSString stringWithFormat:@"Free Memory: %.0f MB", [[UIDevice currentDevice] availableMemory]];
+//}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.parks removeAllObjects];
