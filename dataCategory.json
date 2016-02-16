@@ -7,180 +7,186 @@
  },
  {
  "id":2,
+ "type":"ARCHERY",
+ "name_1":"Target Arch-",
+ "name_2":"ery Range"
+ },
+ {
+ "id":3,
  "type":"BALLFIELD",
  "name_1":"Ball",
  "name_2":"Field"
  },
  {
- "id":3,
+ "id":4,
  "type":"BASKETBALL",
  "name_1":"Basket-",
  "name_2":"ball Court"
  },
  {
- "id":4,
+ "id":5,
  "type":"BOATRAMP",
  "name_1":"Boat",
  "name_2":"Ramp"
  },
  {
- "id":5,
+ "id":6,
  "type":"BOCCEBALL",
  "name_1":"Bocce",
  "name_2":"Ball"
  },
  {
- "id":6,
+ "id":7,
  "type":"BUILDING",
  "name_1":"Building",
  "name_2":""
  },
  {
- "id":7,
+ "id":8,
  "type":"CRICKET",
  "name_1":"Cricket",
  "name_2":"Field"
  },
  {
- "id":8,
+ "id":9,
  "type":"DISCGOLF",
  "name_1":"Disc Golf",
  "name_2":"Course"
  },
  {
- "id":9,
+ "id":10,
  "type":"DOG",
  "name_1":"Dog",
  "name_2":"Field"
  },
  {
- "id":10,
+ "id":11,
  "type":"ENTRANCE",
  "name_1":"Park",
  "name_2":"Entrance"
  },
  {
- "id":11,
+ "id":12,
  "type":"EQUESTRIAN",
  "name_1":"Equest-",
  "name_2":"rian Ring"
  },
  {
- "id":12,
+ "id":13,
  "type":"FIRERING",
  "name_1":"Fire",
  "name_2":"Ring"
  },
  {
- "id":13,
+ "id":14,
  "type":"FISHING",
  "name_1":"Fishing",
  "name_2":"Area"
  },
  {
- "id":14,
+ "id":15,
  "type":"GAZEBO",
  "name_1":"Gazebo",
  "name_2":""
  },
  {
- "id":15,
+ "id":16,
  "type":"GRILL",
  "name_1":"Grill",
  "name_2":""
  },
  {
- "id":16,
+ "id":17,
  "type":"HANDBALL",
  "name_1":"Handball",
  "name_2":"Court"
  },
  {
- "id":17,
+ "id":18,
  "type":"HOCKEYRINK",
  "name_1":"Hockey",
  "name_2":"Rink"
  },
  {
- "id":18,
+ "id":19,
  "type":"HORSESHOE",
  "name_1":"Horse-",
  "name_2":"shoe Pit"
  },
  {
- "id":19,
+ "id":20,
  "type":"MULTIPURPOSE",
  "name_1":"Multipur-",
  "name_2":"pose Field"
  },
  {
- "id":20,
+ "id":21,
  "type":"OBSERVATORY",
  "name_1":"Observa-",
  "name_2":"tory"
  },
  {
- "id":21,
+ "id":22,
  "type":"PARKING",
  "name_1":"Parking",
  "name_2":""
  },
  {
- "id":22,
+ "id":23,
  "type":"PAVILION",
  "name_1":"Pavilion",
  "name_2":""
  },
  {
- "id":23,
+ "id":24,
  "type":"PICNICTABLE",
  "name_1":"Picnic",
  "name_2":"Table"
  },
  {
- "id":24,
+ "id":25,
  "type":"PLAYGROUND",
  "name_1":"Play-",
  "name_2":"ground"
  },
  {
- "id":25,
+ "id":26,
  "type":"RESTROOM",
  "name_1":"Restroom",
  "name_2":""
  },
  {
- "id":26,
+ "id":27,
  "type":"RQBALL",
  "name_1":"Racquet-",
  "name_2":"ball Court"
  },
  {
- "id":27,
+ "id":28,
  "type":"SKATESPOT",
  "name_1":"Skate",
  "name_2":"Park/Spot"
  },
  {
- "id":28,
+ "id":29,
  "type":"SKILLSPARK",
  "name_1":"Skills",
  "name_2":"Park"
  },
  {
- "id":29,
+ "id":30,
  "type":"TENNIS",
  "name_1":"Tennis",
  "name_2":"Court"
  },
  {
- "id":30,
+ "id":31,
  "type":"TRAILHEAD",
  "name_1":"Trailhead",
  "name_2":"Entrance"
  },
  {
- "id":31,
+ "id":32,
  "type":"VOLLEYBALL",
  "name_1":"Volley-",
  "name_2":"ball Court"

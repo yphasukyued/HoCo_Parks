@@ -507,6 +507,7 @@
     json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
     
     NSInteger amphitheater_count = 0;
+    NSInteger archery_count = 0;
     NSInteger ballfield_count = 0;
     NSInteger basketball_count = 0;
     NSInteger bench_count = 0;
@@ -552,6 +553,8 @@
             NSString *fname = [entry objectForKey:@"feature_name"];
             if ([ftype isEqualToString:@"AMPHITHEATER"]) {
                 amphitheater_count += 1;
+            } else if ([ftype isEqualToString:@"ARCHERY"]) {
+                archery_count += 1;
             } else if ([ftype isEqualToString:@"BALLFIELD"]) {
                 ballfield_count += 1;
             } else if ([ftype isEqualToString:@"BASKETBALL"]) {
@@ -630,6 +633,7 @@
 
     NSDictionary * dict =[NSMutableDictionary new];
     [dict setValue:[NSString stringWithFormat:@"%ld",(long)amphitheater_count] forKey:@"AMPHITHEATER"];
+    [dict setValue:[NSString stringWithFormat:@"%ld",(long)archery_count] forKey:@"ARCHERY"];
     [dict setValue:[NSString stringWithFormat:@"%ld",(long)ballfield_count] forKey:@"BALLFIELD"];
     [dict setValue:[NSString stringWithFormat:@"%ld",(long)basketball_count] forKey:@"BASKETBALL"];
     [dict setValue:[NSString stringWithFormat:@"%ld",(long)bench_count] forKey:@"BENCH"];

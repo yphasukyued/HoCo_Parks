@@ -18,6 +18,7 @@
 #import "GetJSON.h"
 #import "Annotation.h"
 #import "AmphitheaterAnnotation.h"
+#import "ArcheryAnnotation.h"
 #import "BlankAnnotation.h"
 #import "EmptyAnnotation.h"
 #import "StartAnnotation.h"
@@ -761,7 +762,7 @@
         NSDictionary *loc0 = [json0 objectAtIndex:k];
         if ([searchSelected isEqualToString:[loc0 objectForKey:@"feature_name"]]) {
             s_name = [[loc0 objectForKey:@"site_name"]uppercaseString];
-            park_description = [[loc0 objectForKey:@"description"]stringByReplacingOccurrencesOfString:@"\\\\n" withString:@"\n"];
+            park_description = [[loc0 objectForKey:@"description"]stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
             
             if ([s_name isEqualToString:@"CENTENNIAL PARK"]) {
                 address = [NSString stringWithFormat:@"%@ (Main/South)\n4800 Woodland Rd (East)\n4651 Centennial Ln (West)\n9801 Old Annapolis Rd (North)\n%@", [loc0 objectForKey:@"address1"],[loc0 objectForKey:@"address2"]];
@@ -879,6 +880,9 @@
         }
         if ([[loc1 objectForKey:@"SKILLSPARK"]integerValue] != 0) {
             info_TextView.text = [info_TextView.text stringByAppendingString:[NSString stringWithFormat:@"\n  Skills Park: %@", [loc1 objectForKey:@"SKILLSPARK"]]];
+        }
+        if ([[loc1 objectForKey:@"ARCHERY"]integerValue] != 0) {
+            info_TextView.text = [info_TextView.text stringByAppendingString:[NSString stringWithFormat:@"\n  Target Archery Range: %@", [loc1 objectForKey:@"ARCHERY"]]];
         }
         if ([[loc1 objectForKey:@"TENNIS"]integerValue] != 0) {
             info_TextView.text = [info_TextView.text stringByAppendingString:[NSString stringWithFormat:@"\n  Tennis Court: %@", [loc1 objectForKey:@"TENNIS"]]];
@@ -1614,6 +1618,7 @@
     info_TextView.textAlignment = NSTextAlignmentLeft;
     info_TextView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     info_TextView.editable=FALSE;
+    info_TextView.dataDetectorTypes = UIDataDetectorTypeAll;
     [infoView addSubview:info_TextView];
     
     parkImageView = [[UIView alloc] initWithFrame:CGRectMake(-(self.view.frame.size.width), 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -3577,6 +3582,12 @@
                 ann37.subtitle = parkCode;
                 ann37.coordinate = location;
                 [self.mapView addAnnotation:ann37];
+            } else if ([f_type isEqualToString:@"ARCHERY"]) {
+                ArcheryAnnotation *ann38 = [[ArcheryAnnotation alloc] init];
+                ann38.title = title;
+                ann38.subtitle = parkCode;
+                ann38.coordinate = location;
+                [self.mapView addAnnotation:ann38];
             }
         }
         
@@ -4135,6 +4146,20 @@
             return annotationView39;
         }
         return pinView39;
+    } else if ([annotation isKindOfClass:[ArcheryAnnotation class]]) {
+        static NSString *annotationIdentifier40 = @"AnnotationIdentifier40";
+        MKAnnotationView *pinView40 = (MKAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier40];
+        if (!pinView40) {
+            MKAnnotationView *annotationView40 = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                              reuseIdentifier:annotationIdentifier40];
+            annotationView40.canShowCallout = YES;
+            imgname = @"ARCHERY_2.png";
+            annotationView40.image = [ParksViewController resizeIMG:(NSString *)imgname mv:(UIView *)self.view size:24];
+            annotationView40.opaque = NO;
+            annotationView40.leftCalloutAccessoryView = directionBTN;
+            return annotationView40;
+        }
+        return pinView40;
     }
     return nil;
 }

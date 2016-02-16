@@ -18,6 +18,7 @@
 #import "GetJSON.h"
 #import "Annotation.h"
 #import "AmphitheaterAnnotation.h"
+#import "ArcheryAnnotation.h"
 #import "BlankAnnotation.h"
 #import "EmptyAnnotation.h"
 #import "StartAnnotation.h"
@@ -3006,6 +3007,12 @@
                 ann37.subtitle = parkCode;
                 ann37.coordinate = location;
                 [self.mapView addAnnotation:ann37];
+            } else if ([f_type isEqualToString:@"ARCHERY"]) {
+                ArcheryAnnotation *ann38 = [[ArcheryAnnotation alloc] init];
+                ann38.title = title;
+                ann38.subtitle = parkCode;
+                ann38.coordinate = location;
+                [self.mapView addAnnotation:ann38];
             }
         }
         
@@ -3564,6 +3571,20 @@
             return annotationView39;
         }
         return pinView39;
+    } else if ([annotation isKindOfClass:[ArcheryAnnotation class]]) {
+        static NSString *annotationIdentifier40 = @"AnnotationIdentifier40";
+        MKAnnotationView *pinView40 = (MKAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier40];
+        if (!pinView40) {
+            MKAnnotationView *annotationView40 = [[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                              reuseIdentifier:annotationIdentifier40];
+            annotationView40.canShowCallout = YES;
+            imgname = @"ARCHERY_2.png";
+            annotationView40.image = [ParksViewController resizeIMG:(NSString *)imgname mv:(UIView *)self.view size:24];
+            annotationView40.opaque = NO;
+            annotationView40.leftCalloutAccessoryView = directionBTN;
+            return annotationView40;
+        }
+        return pinView40;
     }
     return nil;
 }
