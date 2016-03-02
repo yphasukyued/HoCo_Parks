@@ -172,11 +172,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *info;
     info = [self.parks objectAtIndex:indexPath.row];
+    
+    NSString *title1 = [[info objectForKey:@"name_1"]stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     NearestResultViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"NearestResultView"];
     vc.searchType = @"Nearest";
     vc.searchItem = [info objectForKey:@"type"];
-    vc.searchTitle = [NSString stringWithFormat:@"%@%@", [info objectForKey:@"name_1"],[info objectForKey:@"name_2"]];
+    vc.searchTitle = [NSString stringWithFormat:@"%@%@", title1,[info objectForKey:@"name_2"]];
     vc.backViewName = @"MainAmenities";
     vc.latItem = self.latItem;
     vc.lngItem = self.lngItem;

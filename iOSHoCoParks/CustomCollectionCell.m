@@ -19,7 +19,7 @@
         self.customImageView.alpha = 1;
         [self addSubview:self.customImageView];
         
-        CGRect myFrame = CGRectMake(-8, 57.0, 75.0, 15.0);
+        CGRect myFrame = CGRectMake(-6, 57.0, 75.0, 15.0);
         self.customLabel_1 = [[UILabel alloc] initWithFrame:myFrame];
         self.customLabel_1.backgroundColor = [UIColor clearColor];
         self.customLabel_1.font = [UIFont fontWithName:@"TrebuchetMS" size:13];
