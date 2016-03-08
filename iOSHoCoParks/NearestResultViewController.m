@@ -2364,10 +2364,13 @@
     }
 }
 - (void)stopLocationUpdates {
+    self.mapView.showsUserLocation = NO;
+    [self.mapView setUserTrackingMode:MKUserTrackingModeNone animated:YES];
     [locationManager stopUpdatingLocation];
     [locationManager stopUpdatingHeading];
 }
 - (void)startLocationUpdates {
+    self.mapView.showsUserLocation = YES;
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     if (status == kCLAuthorizationStatusDenied) {
         [self appLocationSetting];  
