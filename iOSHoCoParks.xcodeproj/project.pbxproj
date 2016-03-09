@@ -27,7 +27,6 @@
 		360C388C1B9A0DC000D1A96D /* DrivingDirection_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 360C388B1B9A0DC000D1A96D /* DrivingDirection_White.png */; };
 		360C7E9A1B618C4200A87C2E /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C7E991B618C4200A87C2E /* Annotation.m */; };
 		36119DD71BEA820E00BF984B /* HCRPLogo_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 36119DD61BEA820E00BF984B /* HCRPLogo_Green.png */; };
-		36177C851BD166790017C916 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 36177C841BD166790017C916 /* Tiles */; };
 		36177C881BD17A350017C916 /* Hebb House.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36177C861BD17A350017C916 /* Hebb House.jpg */; };
 		36177C891BD17A350017C916 /* James Sykes House.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36177C871BD17A350017C916 /* James Sykes House.jpg */; };
 		36177C8B1BD17BFD0017C916 /* P038.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36177C8A1BD17BFD0017C916 /* P038.jpg */; };
@@ -311,6 +310,7 @@
 		368B65F81B9874D000ECEFD7 /* UserSavedLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 368B65F71B9874D000ECEFD7 /* UserSavedLocation.png */; };
 		368B65FA1B98889A00ECEFD7 /* Patuxent Branch Trail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368B65F91B98889A00ECEFD7 /* Patuxent Branch Trail.plist */; };
 		368C48341B7A8BC90093DAEC /* dataSome_Amenities.json in Resources */ = {isa = PBXBuildFile; fileRef = 368C48331B7A8BC90093DAEC /* dataSome_Amenities.json */; };
+		369067101C8F5BD2008BB2C4 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = 3690670F1C8F5BD2008BB2C4 /* Tiles */; };
 		369222701B92459F00BCC2B5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3692226F1B92459F00BCC2B5 /* Reachability.m */; };
 		369222761B9252F000BCC2B5 /* Airport.png in Resources */ = {isa = PBXBuildFile; fileRef = 369222751B9252F000BCC2B5 /* Airport.png */; };
 		369222781B92530300BCC2B5 /* stop-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 369222771B92530300BCC2B5 /* stop-32.png */; };
@@ -495,7 +495,6 @@
 		360C7E981B618C4200A87C2E /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		360C7E991B618C4200A87C2E /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		36119DD61BEA820E00BF984B /* HCRPLogo_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HCRPLogo_Green.png; sourceTree = "<group>"; };
-		36177C841BD166790017C916 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = "<group>"; };
 		36177C861BD17A350017C916 /* Hebb House.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Hebb House.jpg"; sourceTree = "<group>"; };
 		36177C871BD17A350017C916 /* James Sykes House.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "James Sykes House.jpg"; sourceTree = "<group>"; };
 		36177C8A1BD17BFD0017C916 /* P038.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = P038.jpg; sourceTree = "<group>"; };
@@ -834,6 +833,7 @@
 		368B65F71B9874D000ECEFD7 /* UserSavedLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserSavedLocation.png; sourceTree = "<group>"; };
 		368B65F91B98889A00ECEFD7 /* Patuxent Branch Trail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Patuxent Branch Trail.plist"; sourceTree = "<group>"; };
 		368C48331B7A8BC90093DAEC /* dataSome_Amenities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dataSome_Amenities.json; sourceTree = "<group>"; };
+		3690670F1C8F5BD2008BB2C4 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = "<group>"; };
 		3692226E1B92459F00BCC2B5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		3692226F1B92459F00BCC2B5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		369222751B9252F000BCC2B5 /* Airport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airport.png; sourceTree = "<group>"; };
@@ -1578,7 +1578,7 @@
 			children = (
 				36D631171C0DF121000EBCA6 /* AvailableMemory.h */,
 				36D631181C0DF121000EBCA6 /* AvailableMemory.m */,
-				36177C841BD166790017C916 /* Tiles */,
+				3690670F1C8F5BD2008BB2C4 /* Tiles */,
 				3644D9B71B6FE134007C3392 /* data */,
 				36D939281B5D8F8B00F77868 /* Boundary */,
 				36BB52051B55420E00990F37 /* Class */,
@@ -1790,7 +1790,6 @@
 				365AC0471BC40C7600A0BFE1 /* WRP1.jpg in Resources */,
 				365AC0771BC40C8B00A0BFE1 /* P019.jpg in Resources */,
 				36FCE1FB1B88C5A60064A964 /* HORSESHOE_2.png in Resources */,
-				36177C851BD166790017C916 /* Tiles in Resources */,
 				369428861B5FDD57004FF855 /* Town and Country Park.plist in Resources */,
 				36FCE20B1B88C5A60064A964 /* SKATESPOT_2.png in Resources */,
 				365AC06D1BC40C8B00A0BFE1 /* P006.jpg in Resources */,
@@ -1949,6 +1948,7 @@
 				365AC0741BC40C8B00A0BFE1 /* P014.jpg in Resources */,
 				3627A9FC1BB5956E0092717F /* Icon80.png in Resources */,
 				3664B16F1B7CC899008E33EE /* phone.png in Resources */,
+				369067101C8F5BD2008BB2C4 /* Tiles in Resources */,
 				362659201B860D43004E6BA2 /* LineChart1.png in Resources */,
 				3694285A1B5FCD6C004FF855 /* West Friendship Park.plist in Resources */,
 				365AC0751BC40C8B00A0BFE1 /* P015.jpg in Resources */,

@@ -180,7 +180,7 @@
     UIButton *unitBTN;
     UIImageView *postImage;
     UIButton *shareBTN;
-    UIButton *gpsBTN;
+    //UIButton *gpsBTN;
     //UILabel *memoryLabel;
 }
 @end
@@ -464,7 +464,7 @@
     [self pageTurn:pageControl];
 }
 - (void) pageTurn: (UIPageControl *) aPageControl {
-    gpsBTN.hidden = NO;
+    //gpsBTN.hidden = NO;
     [indicator stopAnimating];
     NSInteger whichPage = aPageControl.currentPage;
     if (aPageControl.currentPage == 0) {
@@ -472,9 +472,9 @@
             || ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
             ) {
             uLoc = @"ON";
-            [gpsBTN setTitle:@"Location Service is off" forState:UIControlStateNormal];
+            //[gpsBTN setTitle:@"Location Service is off" forState:UIControlStateNormal];
         } else {
-            [gpsBTN setTitle:@"Location Service is on" forState:UIControlStateNormal];
+            //[gpsBTN setTitle:@"Location Service is on" forState:UIControlStateNormal];
             [self startLocationUpdates];
         }
         searchItem = originalItem;
@@ -493,9 +493,9 @@
             || ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
             ) {
             uLoc = @"ON";
-            [gpsBTN setTitle:@"Location Service is off" forState:UIControlStateNormal];
+            //[gpsBTN setTitle:@"Location Service is off" forState:UIControlStateNormal];
         } else {
-            [gpsBTN setTitle:@"Location Service is on" forState:UIControlStateNormal];
+            //[gpsBTN setTitle:@"Location Service is on" forState:UIControlStateNormal];
             [self startLocationUpdates];
         }
         searchItem = originalItem;
@@ -698,7 +698,7 @@
     myScrollView.pagingEnabled=TRUE;
     myScrollView.delegate=self;
     [mainView addSubview:myScrollView];
-    
+    /*
     gpsBTN = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, mainView.frame.size.width, 25)];
     [gpsBTN addTarget:self action:@selector(callSetting) forControlEvents:UIControlEventTouchUpInside];
     gpsBTN.backgroundColor = [UIColor colorWithRed:195/255.0f green:195/255.0f blue:195/255.0f alpha:0.5f];
@@ -706,7 +706,7 @@
     gpsBTN.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     gpsBTN.hidden = YES;
     [mainView addSubview:gpsBTN];
-    
+    */
     UISwipeGestureRecognizer *leftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     leftSwipeGestureRecognizer.numberOfTouchesRequired = 1;
     leftSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -1019,8 +1019,9 @@
     self.mapView = nil;
 }
 - (void)appDidBecomeActive:(NSNotification *)notification {
-    [self checkSetting];
+    //[self checkSetting];
 }
+/*
 - (void)checkSetting {
     if (!([CLLocationManager locationServicesEnabled])
         || ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
@@ -1041,6 +1042,7 @@
         [self pageTurn:pageControl];
     }
 }
+*/
 - (void)recreateMap {
     CGRect mapFrame = self.mapView.bounds;
     [self.mapView removeFromSuperview];
@@ -2304,7 +2306,7 @@
     }
     [CustomZoom setMapCenter:self.mapView item:titleCode subItem:parkCode lat:self.latItem lng:self.lngItem];
     self.titleImage.image = inImage;
-    [self checkSetting];
+    //[self checkSetting];
 
 }
 -(void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -2379,10 +2381,17 @@
         if (nil == locationManager) {
             locationManager = [[CLLocationManager alloc] init];
         }
+        //locationManager.delegate = self;
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        //locationManager.activityType = CLActivityTypeAutomotiveNavigation;
+        //locationManager.headingFilter = kCLHeadingFilterNone;
+        
         locationManager.delegate = self;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-        locationManager.activityType = CLActivityTypeAutomotiveNavigation;
-        locationManager.headingFilter = kCLHeadingFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.activityType = CLActivityTypeFitness;
+        locationManager.distanceFilter = 10; // meters
+        
+        
         if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             [locationManager requestWhenInUseAuthorization];
         }
@@ -2390,6 +2399,23 @@
         [locationManager startUpdatingHeading];
     }
 }
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    for (CLLocation *newLocation in locations) {
+        
+        NSDate *eventDate = newLocation.timestamp;
+        
+        NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+        
+        if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
+            
+            MKCoordinateRegion region =
+            MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+            [self.mapView setRegion:region animated:YES];
+            
+        }
+    }
+}
+/*
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
     latUserLocation = newLocation.coordinate.latitude;
@@ -2416,6 +2442,7 @@
         [locationManager stopUpdatingHeading];
     }
 }
+*/
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
 }
@@ -3729,7 +3756,7 @@
     return YES;
 }
 - (void)shareThis {
-    gpsBTN.hidden = YES;
+    //gpsBTN.hidden = YES;
     UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage*theImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -3808,7 +3835,7 @@
     backBTN.hidden = NO;
     appSubTitle.hidden = NO;
     appTitle.hidden = NO;
-    gpsBTN.hidden = NO;
+    //gpsBTN.hidden = NO;
     [UIView animateWithDuration:1.0
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut

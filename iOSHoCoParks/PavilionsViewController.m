@@ -192,7 +192,7 @@
     UIButton *unitBTN;
     UIImageView *postImage;
     UIButton *shareBTN;
-    UIButton *gpsBTN;
+    //UIButton *gpsBTN;
     //UILabel *memoryLabel;
 }
 
@@ -782,8 +782,8 @@
     [self pageTurn:pageControl];
 }
 - (void) pageTurn: (UIPageControl *) aPageControl {
-    gpsBTN.hidden = NO;
-    [self checkSetting];
+    //gpsBTN.hidden = NO;
+    //[self checkSetting];
     [self setTitleWhite];
     int whichPage = 0;
     if (aPageControl.currentPage == 0) {
@@ -994,7 +994,6 @@
     memoryLabel.textAlignment = NSTextAlignmentCenter;
     memoryLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [mainView addSubview:memoryLabel];
-    */
     gpsBTN = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, mainView.frame.size.width, 25)];
     [gpsBTN addTarget:self action:@selector(callSetting) forControlEvents:UIControlEventTouchUpInside];
     gpsBTN.backgroundColor = [UIColor colorWithRed:195/255.0f green:195/255.0f blue:195/255.0f alpha:0.5f];
@@ -1002,7 +1001,7 @@
     gpsBTN.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     gpsBTN.hidden = YES;
     [mainView addSubview:gpsBTN];
-    
+    */
     UISwipeGestureRecognizer *leftSwipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     leftSwipeGestureRecognizer.numberOfTouchesRequired = 1;
     leftSwipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -1427,8 +1426,9 @@
     self.mapView = nil;
 }
 - (void)appDidBecomeActive:(NSNotification *)notification {
-    [self checkSetting];
+    //[self checkSetting];
 }
+/*
 - (void)checkSetting {
     if (!([CLLocationManager locationServicesEnabled])
         || ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
@@ -1446,6 +1446,7 @@
         saveLocationBTN.hidden = NO;
     }
 }
+*/
 - (void)recreateMap {
     CGRect mapFrame = self.mapView.bounds;
     [self.mapView removeFromSuperview];
@@ -2640,10 +2641,16 @@
         if (nil == locationManager) {
             locationManager = [[CLLocationManager alloc] init];
         }
+        //locationManager.delegate = self;
+        //locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        //locationManager.activityType = CLActivityTypeAutomotiveNavigation;
+        //locationManager.headingFilter = kCLHeadingFilterNone;
+        
         locationManager.delegate = self;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-        locationManager.activityType = CLActivityTypeAutomotiveNavigation;
-        locationManager.headingFilter = kCLHeadingFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.activityType = CLActivityTypeFitness;
+        locationManager.distanceFilter = 10; // meters
+        
         if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             [locationManager requestWhenInUseAuthorization];
         }
@@ -2651,6 +2658,23 @@
         [locationManager startUpdatingHeading];
     }
 }
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    for (CLLocation *newLocation in locations) {
+        
+        NSDate *eventDate = newLocation.timestamp;
+        
+        NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+        
+        if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
+            
+            MKCoordinateRegion region =
+            MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+            [self.mapView setRegion:region animated:YES];
+            
+        }
+    }
+}
+/*
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     latUserLocation = newLocation.coordinate.latitude;
@@ -2674,6 +2698,7 @@
     }
     
 }
+*/
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollowWithHeading animated:YES];
 }
@@ -3888,7 +3913,7 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (void)shareThis {
-    gpsBTN.hidden = YES;
+    //gpsBTN.hidden = YES;
     UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage*theImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -3969,7 +3994,7 @@
     appSubTitle.hidden = NO;
     appTitle.hidden = NO;
     fullImageBTN.hidden = NO;
-    gpsBTN.hidden = NO;
+    //gpsBTN.hidden = NO;
     [UIView animateWithDuration:1.0
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
