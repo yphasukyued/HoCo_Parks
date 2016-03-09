@@ -2401,18 +2401,23 @@
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     for (CLLocation *newLocation in locations) {
-        
         NSDate *eventDate = newLocation.timestamp;
-        
         NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-        
         if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
-            
+            latUserLocation = newLocation.coordinate.latitude;
+            lngUserLocation = newLocation.coordinate.longitude;
             MKCoordinateRegion region =
             MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
             [self.mapView setRegion:region animated:YES];
-            
+            self.latItem = newLocation.coordinate.latitude;
+            self.lngItem = newLocation.coordinate.longitude;
         }
+    }
+    
+    if ([uLoc isEqualToString:@"OFF"]) {
+        [self.mainTableView reloadData];
+        [locationManager stopUpdatingLocation];
+        [locationManager stopUpdatingHeading];
     }
 }
 /*
