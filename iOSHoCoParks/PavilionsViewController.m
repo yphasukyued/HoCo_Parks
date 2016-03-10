@@ -2665,8 +2665,7 @@
         if (fabs(howRecent) < 10.0 && newLocation.horizontalAccuracy < 20) {
             latUserLocation = newLocation.coordinate.latitude;
             lngUserLocation = newLocation.coordinate.longitude;
-            MKCoordinateRegion region =
-            MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+            MKCoordinateRegion region = MKCoordinateRegionMake(newLocation.coordinate, self.mapView.region.span);
             [self.mapView setRegion:region animated:YES];
             self.latItem = newLocation.coordinate.latitude;
             self.lngItem = newLocation.coordinate.longitude;
