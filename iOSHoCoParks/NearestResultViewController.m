@@ -2366,6 +2366,7 @@
     }
 }
 - (void)stopLocationUpdates {
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
     self.mapView.showsUserLocation = NO;
     [self.mapView setUserTrackingMode:MKUserTrackingModeNone animated:YES];
     [locationManager stopUpdatingLocation];
@@ -2391,10 +2392,10 @@
         locationManager.activityType = CLActivityTypeFitness;
         locationManager.distanceFilter = 10; // meters
         
-        
         if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             [locationManager requestWhenInUseAuthorization];
         }
+        [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
         [locationManager startUpdatingLocation];
         [locationManager startUpdatingHeading];
     }
