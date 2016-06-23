@@ -137,7 +137,6 @@ const int MAXIMUM_ZOOM = 20;
     
     return region;
 
-    
 }
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     //NSLog(@"Enter %@", region.identifier);

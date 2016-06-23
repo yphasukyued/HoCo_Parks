@@ -233,7 +233,6 @@
     CGRect row1Frame = CGRectMake((self.view.frame.size.width/2)-144, 80, 32, 32);
     
     phoneBTN = [UIButton buttonWithType:UIButtonTypeCustom];
-    phoneBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     phoneBTN.frame = row1Frame;
     phoneBTN.tag = 1;
     [phoneBTN setBackgroundImage:[UIImage imageNamed:@"phone.png"] forState:UIControlStateNormal];
@@ -242,14 +241,12 @@
     
     row1Frame.origin.x += 62;
     ruleBTN = [UIButton buttonWithType:UIButtonTypeCustom];
-    ruleBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     ruleBTN.frame = row1Frame;
     ruleBTN.tag = 2;
     [ruleBTN setBackgroundImage:[UIImage imageNamed:@"rules.png"] forState:UIControlStateNormal];
     [ruleBTN addTarget:self action:@selector(openRule) forControlEvents:UIControlEventTouchUpInside];
     [navMenuView addSubview:ruleBTN];
     
-    thcBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     thcBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     thcBTN.frame = CGRectMake((self.view.frame.size.width/2)-25, 80, 50, 50);
     thcBTN.tag = 3;
@@ -259,7 +256,6 @@
     
     row1Frame.origin.x += 136;
     searchBTN = [UIButton buttonWithType:UIButtonTypeCustom];
-    searchBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     searchBTN.frame = row1Frame;
     searchBTN.tag = 4;
     [searchBTN setBackgroundImage:[UIImage imageNamed:@"search.png"] forState:UIControlStateNormal];
@@ -267,7 +263,6 @@
     [navMenuView addSubview:searchBTN];
     
     row1Frame.origin.x += 62;
-    calendarBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     calendarBTN = [UIButton buttonWithType:UIButtonTypeCustom];
     calendarBTN.frame = row1Frame;
     calendarBTN.tag = 5;

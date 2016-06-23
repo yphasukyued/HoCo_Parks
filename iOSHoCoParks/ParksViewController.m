@@ -1053,7 +1053,7 @@
             mainTableView.frame = CGRectMake(0, 5, myTableView.frame.size.width, (myTableView.frame.size.height-10));
             [mainTableView reloadData];
         }
-
+        
     } else if (aPageControl.currentPage == 5) {
         whichPage = 350;
         pageControl.frame = CGRectMake(-50, myScrollView.frame.size.height-20, self.view.frame.size.width, 10);
